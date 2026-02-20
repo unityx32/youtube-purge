@@ -18,7 +18,7 @@ ytd-video-renderer #video-title {
 }
 
 /* ==========================================================================
-   2. LIMPEZA GERAL (NUCLEAR)
+   2. LIMPEZA GERAL (LEGALIZE NUCLEAR BOMBS)
    ========================================================================== */
 ytd-feed-filter-chip-bar-renderer {
   display: none !important;
@@ -28,6 +28,7 @@ ytd-feed-filter-chip-bar-renderer {
 ytd-rich-section-renderer {
   display: none !important;
 }
+
 /* Remove Prateleiras de Shorts */
 ytd-reel-shelf-renderer {
   display: none !important;
@@ -38,6 +39,14 @@ ytd-guide-entry-renderer:has(a[href^="/shorts"]),
 ytd-guide-entry-renderer:has(a[title="Shorts"]),
 ytd-mini-guide-entry-renderer:has(a[href^="/shorts"]),
 ytd-mini-guide-entry-renderer[aria-label="Shorts"] {
+  display: none !important;
+}
+
+/* Apaga Shorts avulsos disfarçados em qualquer lugar do site */
+ytd-video-renderer:has(a[href^="/shorts"]),
+ytd-compact-video-renderer:has(a[href^="/shorts"]),
+ytd-rich-item-renderer:has(a[href^="/shorts"]),
+yt-lockup-view-model:has(a[href^="/shorts"]) {
   display: none !important;
 }
 
@@ -63,11 +72,13 @@ ytd-mini-guide-entry-renderer[aria-label="Shorts"] {
   flex: 0 0 auto !important;
   margin-right: 8px !important;
 }
+
 #secondary .yt-lockup-view-model__metadata {
   width: auto !important;
   flex: 1 !important;
   min-width: 0 !important;
 }
+
 #secondary .yt-lockup-view-model-title,
 #secondary h3.yt-lockup-view-model-title {
   font-size: 1.3rem !important;
@@ -78,6 +89,7 @@ ytd-mini-guide-entry-renderer[aria-label="Shorts"] {
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important;
 }
+
 #secondary yt-lockup-view-model,
 #secondary .yt-lockup-view-model {
   margin-bottom: 0px !important;
@@ -93,21 +105,20 @@ ytd-mini-guide-entry-renderer[aria-label="Shorts"] {
 ytd-two-column-search-results-renderer #secondary {
   display: none !important;
 }
+
 ytd-search grid-shelf-view-model {
   display: none !important;
 }
+
 ytd-search ytd-shelf-renderer {
   display: none !important;
 }
+
 ytd-search ytd-horizontal-card-list-renderer {
   display: none !important;
 }
-ytd-search ytd-reel-shelf-renderer {
-  display: none !important;
-}
 
-/* Apaga Shorts avulsos disfarçados */
-ytd-video-renderer:has(a[href^="/shorts"]) {
+ytd-search ytd-reel-shelf-renderer {
   display: none !important;
 }
 
@@ -157,6 +168,7 @@ ytd-search yt-lockup-view-model .yt-lockup-view-model__content-image {
   flex: 0 0 auto !important;
   margin-right: 16px !important;
 }
+
 ytd-search yt-lockup-view-model .yt-lockup-view-model__metadata {
   width: auto !important;
   flex: 1 !important;
@@ -168,6 +180,7 @@ ytd-search ytd-video-renderer ytd-thumbnail {
   max-width: 280px !important;
   min-width: 280px !important;
 }
+
 ytd-search ytd-video-renderer .text-wrapper {
   max-width: 100% !important;
 }
